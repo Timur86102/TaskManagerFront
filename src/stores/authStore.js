@@ -33,7 +33,7 @@ export const useAuthStore = defineStore('auth', {
         async getUser() {
             this.errorMessage = "";
             try {
-                const response = await axios.post('http://localhost:8000/api/user', { 
+                const response = await axios.get('http://localhost:8000/api/user', { 
                     headers: {
                         Authorization: 'Bearer ' + this.token
                     }
